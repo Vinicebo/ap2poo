@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ListResourceBundle;
 
@@ -9,12 +10,21 @@ public class Seminario extends Evento {
     private String tema;
     private String nomeOrientador;
 
-    public Seminario(String data, int duracao, Local local, double orcamento, String titulo, List<Participante> alunosParticipantes, String nomeAlunoApresentador, String nomeOrientador, String tema) {
-        super(data, duracao, local, orcamento, titulo);
+    public Seminario(String data, int duracao, Local local, double orcamento, String titulo, String nomeAlunoApresentador, String nomeOrientador, String tema, List<Participante> alunosParticipantes) {
+        super(titulo, data, duracao, orcamento, local);
         this.alunosParticipantes = alunosParticipantes;
         this.nomeAlunoApresentador = nomeAlunoApresentador;
         this.nomeOrientador = nomeOrientador;
         this.tema = tema;
+        this.alunosParticipantes = new ArrayList<Participante>();
+    }
+
+    public Seminario(String data, int duracao, Local local, double orcamento, String titulo, String nomeAlunoApresentador, String nomeOrientador, String tema) {
+        super(titulo, data, duracao, orcamento, local);
+        this.nomeAlunoApresentador = nomeAlunoApresentador;
+        this.nomeOrientador = nomeOrientador;
+        this.tema = tema;
+        this.alunosParticipantes = new ArrayList<Participante>();
     }
 
 

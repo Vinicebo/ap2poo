@@ -21,9 +21,11 @@ public class Minicurso extends Evento {
         this.materiais = new ArrayList<String>();
     }
 
-    public Minicurso(String data, int duracao, Local local, double orcamento, String titulo, int cargaHoraria, List<String> materiais, List<Instrutor> instrutores) {
+    public Minicurso(String data, int duracao, Local local, double orcamento, String titulo, int cargaHoraria) {
         super(data, duracao, local, orcamento, titulo);
         this.cargaHoraria = cargaHoraria;
+        this.instrutores = new ArrayList<Instrutor>();
+        this.materiais = new ArrayList<String>();
 
     }
 
@@ -69,6 +71,6 @@ public class Minicurso extends Evento {
     }
 
     public void addMaterial(String material){
-        this.materiais.add(material)
+        this.materiais.add(material);
     }
 }

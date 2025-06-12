@@ -29,10 +29,22 @@ public class Programa {
         Palestra palestra = new Palestra("10/07/2025",4 , 1000.0, "Automação industrial", renato,
                 auditorio1);
 
-        Minicurso minicurso = new Minicurso()
+        palestra.addInscrito(p1);
+        palestra.addInscrito(p2);
 
-        Seminario seminario = new Seminario("Robótica em Educação", "15/07/2025", 3, 800.0, labInformatica,
-                "Aplicações práticas", Arrays.asList(p1, p2), "Prof. Dr. Alberto Souza");
+        Minicurso minicurso = new Minicurso("14/07/2025",8,sala101,5000.0,"Java Foundations", 8);
+        minicurso.addMaterial("Livro java");
+        minicurso.addMaterial("PDF java");
+        minicurso.addInscrito(p1);
+        minicurso.addInscrito(p2);
+        minicurso.addInstrutor(instrutor1);
+
+        Seminario seminario = new Seminario("15/07/2025", 4, labInformatica,8000.0,"Robótica no aprendizado", "Pedro Pascal", "Professor Henrique Gomez", "Robótica na educaçaõ");
+        seminario.addAluno(p1);
+        seminario.addAluno(p2);
+        seminario.addAluno(p3);
+
+
 
     }
 }
